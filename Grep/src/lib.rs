@@ -1,6 +1,20 @@
-/*
-Se extrae lo de la clase main a un nuevo archivo para dejar la clase main mas limpia
-*/ 
+/* 
+para entender mejor lo que hace las funciones y las lineas de codigo, se hara un pequeño resumen de estos
+
+-Se extrajo lo de la clase main para dejarla solo con lo necesario
+
+- Result es un tipo para retornar y propagar errores
+    enum Result<T, E> {
+     Ok(T),
+     Err(E),
+    }
+    En la funcion new Result devuelve un struc Config si es Ok o un str si es Err
+
+- pub -> pub hace que un modulo, funcion o estructura de dato sea visible para los demas modulos
+- Box -> forma de pasar de pila a arbol (stack to heap) 
+ */ 
+
+
 use std::fs;
 use std::error::Error;
 use std::env;
@@ -12,10 +26,13 @@ pub struct Config{
 }
 
 impl Config{
-    //guardando los argumentos en variables
+    
+    /*
+    guardando los argumentos en variables
+    */ 
    pub fn new(args : &[String])->Result<Config , &'static str>{
         if args.len() < 3 {
-            return Err("not son argumentos suficientes")
+            return Err("no son argumentos suficientes")
         }
         let query = args[1].clone();
         let filename = args[2].clone();

@@ -9,7 +9,7 @@
  * 
  * 
  * El proyecto fue hecho por Gabriel Aillapan y Daniel Ruiz
- *fecha de ultima modificacion:02/07/2022 
+ *fecha de ultima modificacion: 02/07/2022 
  */
 
 
@@ -41,6 +41,7 @@ fn main(){
         process::exit(1);
     }
 }
+
 
 
 

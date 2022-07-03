@@ -1,7 +1,5 @@
 /*
-std::env -> 
-std::fs -> to handle files (fs = file system)
-.expect -> to handle errors 
+Se extrae lo de la clase main a un nuevo archivo para dejar la clase main mas limpia
 */ 
 use std::fs;
 use std::error::Error;
